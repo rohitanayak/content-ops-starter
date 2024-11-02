@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Page</title>
+    <style>
+        /* Resetting basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container styling */
+        .main_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Gallery blocks styling */
+        .main-block {
+            width: 70%;
+            height: 20%;
+            margin: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .main-block:hover {
+            transform: scale(1.05);
+        }
+
+        .main-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Container styling */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        /* Gallery blocks styling */
+        .gallery-block {
+            width: 40%;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery-block:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Message and Contact Us sections styling */
+        .info-section {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f0f0f0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        /* Contact form styling */
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        
+
+        /* Section styling */
+        .section {
+            min-height: 100vh;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+
+        /* Background styling */
+        .section1 {
+            background: url('pic1.webp') no-repeat center center/cover;
+            min-height: 100vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        /* Background styling */
+        .section2 {
+            background-color: #5A5A5A;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+            
+        }
+        
+ 
+        /* Background styling */
+        .gallery-block1 {
+            background: url('LifePath.jpg') no-repeat center center/cover;
+            min-height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            width: 40%;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        /* Background styling */
+        .gallery-block2 {
+            background: url("NameNumber.jpg") no-repeat center center/cover;
+            min-height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            width: 40%;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        
+        /* Background styling */
+        .gallery-block3 {
+            background: url("RelationShip.jpg") no-repeat center center/cover;
+            min-height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            width: 40%;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        
+        /* Background styling */
+        .gallery-block4 {
+            background: url("PersonalYear.jpg") no-repeat center center/cover;
+            min-height: 50vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            width: 40%;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-block1:hover {
+            transform: scale(1.05);
+        }
+        .gallery-block2:hover {
+            transform: scale(1.05);
+        }        
+        .gallery-block3:hover {
+            transform: scale(1.05);
+        }        
+        .gallery-block4:hover {
+            transform: scale(1.05);
+        }
+        /* Background styling */
+        .section2-text {
+            min-height: 10vh;
+            display: flex;
+
+            color: white;
+            padding: 20px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        /* Background styling */
+        .section1_1 {
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            color: white;
+            width: 35%;
+            min-height: 10vh;
+            bottom:300px;
+            left:0px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+	
+    <!-- Background Image with Text and Button Overlay -->
+    <div class="section1">
+	    <div class="section1_1">
+			<div class="section1_11">
+				<h1  style="text-align:left; font-size: 4em;font-weight: bold;">Discover Your Numerological Path Now!</h1>
+			</div>
+			<div class="section1_12">
+				<h1  style="text-align:left; font-size: 1em;">Uncover the secrets of your numbers and transform your destiny today with Singapore's leading spiritual insights expert!</h1>
+			</div>
+        </div>
+      <!--  <a href="scrollpage.html" class="button">Go to Scrollable Page</a>-->
+      
+    </div>
+    
+    <!-- Scrollable Content Sections -->
+    <div class="section2">
+	    <div class="section2-text">
+	    	<h1  style="text-align:left; font-size: 4em;margin-left: 1.77em;margin-right: 0;font-weight: bold;">Discover Your Life Path</h1>
+	    </div>
+	    <div class="gallery-block1">
+		    <h1>Life Path Analysis</h1>
+		    <p>Unlock your personal numerology chart for profound guidance on life's path and hidden opportunities.</p>
+		</div>
+        <div class="gallery-block2">
+		    <h1>Name Numerology</h1>
+		    <p>Get the Best Name for You and Your Company to remove all the huddles for your success.</p>
+		</div>
+        <div class="gallery-block3">
+		    <h1>Relationship Compatibility</h1>
+		    <p>Know your compatibility with your Partner and find out the missing numbers to make your relations even stronger.</p>
+		</div>
+        <div class="gallery-block4">
+		    <h1>Personal Year Forecasts</h1>
+		    <p>Prepare for your coming year bsed on your Birth Date.</p>
+		</div>
+    </div>
+    
+    
+    <div class="section">Section 2: Scroll Down for More Content</div>
+    
+    
+    <div class="section">Section 3: Enjoy the Scrolling Experience</div>
+    
+    
+    <div class="section">
+    <!-- Message Section -->
+    <div class="info-section">
+        <h2>Message</h2>
+        <p>Welcome to our gallery! We hope you enjoy these carefully curated images. Each one represents a special moment or inspiration that we wanted to share with you. Feel free to reach out with any questions or comments.</p>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div class="info-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    </div>
+    
+    <div class="section">Section 5: You’ve Reached the End!</div>
+    
+
+
+
+
+</body>
+</html>
